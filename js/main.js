@@ -18,4 +18,10 @@ const navSlide = () => {
       form.reset();
     };
   };
+    
+
   
+  const header = document.querySelector("header");
+  header.style.backgroundImage = "url('images/bikk.jpg')"; // Ganti dengan lokasi gambar Anda
+  header.style.backgroundRepeat = "no-repeat"; // Jika Anda tidak ingin gambar diulang
+  header.style.backgroundSize = "cover";

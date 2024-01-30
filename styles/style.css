@@ -61,18 +61,28 @@ margin: 0  auto;
 }
 /*Buttons*/
 .btn{
-  padding: 1rem 1.5rem;
-  background:var(--secondaryTextColor) ;
-  border: 1.5px solid var(--boderColor);
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  text-decoration:none ;
+  color: var(--primaryTextColor);
+  background: transparent;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
-  color:var(--primaryTextColor);
-  cursor: pointer;
-}
-.btn:hover{
-    box-shadow: rgba(0, 0, 0, 0.04)0px 3px 5px;
-background-color: var(--boderColor);
-}
+  transition: ease-out 0.5s;
+  border: 2px solid var(--boderColor);
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 var(--boderColor);
+ }
+ .btn:hover{
+    color: var(--primaryTextColor);
+ background-color: var(--boderColor);
+ }
+ .btn:active{
+   transform: scale(0.9);
+ }
 
 /* tittle*/
 .section-title {
@@ -129,7 +139,7 @@ gap: 3rem;
     font-size: 2rem;
 }
 .logo a {
-    color:var(--primaryTextColor);
+    color:var(--lineColor);
     
 
 }
@@ -141,6 +151,7 @@ nav ul li{
 
 nav ul li a{
     color:var(--primaryTextColor);
+   
 }
 
 /*burger*/
@@ -170,6 +181,7 @@ z-index:99;
     font-size: 3rem;
     font-weight: 700;
     margin:0.5rem 0 1rem; 
+    color: #d9d9d9;
 }
 .hero-name span{
    color:var(--primaryTextColor);
@@ -222,10 +234,10 @@ z-index:99;
 /* HEARDER */
 
 header {
-    color:var(--primaryIconColorHover); 
+    color:var(--lineColor); 
     height: 645px;
-    margin-bottom: 330px;
-    box-shadow: 2px 5px 80px var(--primaryTextColor); 
+    margin-bottom: 30px;
+    box-shadow: 2px 5px 80px var(--lineColor); 
 }
   #services {
     background-color: var(--secondaryBackgroundColor);
@@ -510,3 +522,60 @@ fill: rgb(75, 75, 227);
   fill: rgb(55, 232, 55);
 }
  
+
+.greetings{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .5rem;
+    }
+}
